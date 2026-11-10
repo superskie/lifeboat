@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+*.local.*
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+demo/.state/
+
+# Working notes of the maintainer: local only.
+CLAUDE.md

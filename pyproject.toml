@@ -1,0 +1,17 @@
+[project]
+name = "lifeboat"
+version = "0.1.0"
+description = "Hermes plugin: rescue locked assets from a drained EVM wallet with one EIP-7702 transaction."
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "web3>=7.10,<8",
+    "eth-account>=0.13.6,<0.14",
+    "requests>=2.31,<3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib -p no:cacheprovider"
+pythonpath = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning:websockets.*"]

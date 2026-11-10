@@ -1,0 +1,27 @@
+name: lifeboat
+version: 0.1.0
+manifest_version: 2
+requires_hermes: ">=0.22.0"
+license: MIT
+kind: standalone
+description: Rescue airdrops, unlocks and staked positions from a drained EVM wallet with one EIP-7702 transaction paid by a fresh operator.
+provides_tools:
+  - lifeboat_scan
+  - lifeboat_plan
+  - lifeboat_simulate
+  - lifeboat_status
+  - lifeboat_execute
+  - lifeboat_sweep_back
+provides_hooks:
+  - pre_tool_call
+requires_env:
+  - name: LIFEBOAT_VICTIM_KEY
+    description: Private key of the drained wallet. Already leaked; used only to sign the delegation.
+    secret: true
+  - name: LIFEBOAT_SAFE_ADDRESS
+    description: Address that receives everything rescued. Never taken from tool arguments.
+config_schema:
+  rpc:
+    type: dict
+    default: {}
+    description: Optional RPC URL per chain id

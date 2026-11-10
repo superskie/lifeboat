@@ -1,5 +1,3 @@
-<p align="center"><img src="assets/banner.svg" alt="lifeboat: a small winged boat carries glowing assets away from a sinking wallet while a sweeper drone scans the empty wreck" width="100%"></p>
-
 # lifeboat
 
 A Hermes Agent plugin that rescues what a sweeper bot left behind in a drained EVM wallet.
